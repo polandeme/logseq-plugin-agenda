@@ -44,7 +44,7 @@ const Task: React.FC<{
         const rawData: any = task.raw
         const { id: pageId, originalName } = rawData?.page || {}
         let pageName = originalName
-        // datascriptQuery 查询出的 block, 没有详细的 page 属性, 需要手动查询
+        // datascriptQuery 查询出的 block, 没有详细的 page 属性, 需要手动查询.
         if (!pageName) {
           const page = await getPageData({ id: pageId })
           pageName = page?.originalName
