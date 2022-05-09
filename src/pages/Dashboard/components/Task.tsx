@@ -22,7 +22,7 @@ function getTime(task: ISchedule) {
 const Task: React.FC<{
   task: ISchedule
   showTimeDot?: boolean
-  type?: 'overdue' | 'allDay' | 'time'
+  type?: 'allDay' | 'time' | 'overdue' 
 }> = ({ task, showTimeDot = false, type = 'allDay' }) => {
   const startDay = dayjs(task.start as string)
   const endDay = dayjs(task.end as string)
